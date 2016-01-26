@@ -13,10 +13,11 @@ public abstract class Entity {
     protected Sprite sprite;
     protected Vector2 pos, direction;
 
-    public Entity(Texture texture, Vector2 pos, Vector2 direction, float scaleX, float scaleY) {
+    public Entity(Texture texture, Vector2 pos, Vector2 direction, float scaleX, float scaleY, int rotation) {
         this.sprite = new Sprite(texture);
         this.sprite.setSize(MainGame.SCREEN_WIDTH / scaleX, MainGame.SCREEN_WIDTH / scaleY);
-        this.sprite.setRotation(0);
+        this.sprite.setOriginCenter();
+        this.sprite.setRotation(rotation);
         this.sprite.setPosition(pos.x, pos.y);
         this.sprite.getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         this.pos = pos;

@@ -7,9 +7,23 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.sc.game.screen.GameScreen;
 import com.sc.game.screen.ScreenManager;
 
+
+/*
+1. move cannon body along x
+2. rotate cannon
+3. shoot cannon
+4. move enemy cannon randomly
+5. create rules for missiles
+6. hit detection for projectiles on cannons
+7. hit detection for projectiles on projectiles
+8. reduce health on hit
+9. begin and end screen.
+10. advanced physics
+11. advance AI
+ */
 public class MainGame implements ApplicationListener {
 	public static int SCREEN_WIDTH, SCREEN_HEIGHT, SCALED_HEIGHT;
-	public static float ASPECT_RATIO, DEFAULT_SPEED;
+	public static float ASPECT_RATIO, DEFAULT_MISSILE_SPEED, DEFAULT_CANNON_SPEED;
 	SpriteBatch batch;
 	
 	@Override
@@ -18,7 +32,8 @@ public class MainGame implements ApplicationListener {
 		SCREEN_HEIGHT = Gdx.graphics.getHeight();
 		ASPECT_RATIO = SCREEN_HEIGHT / SCREEN_WIDTH;
 		SCALED_HEIGHT = (int)(SCREEN_HEIGHT * ASPECT_RATIO);
-		DEFAULT_SPEED = SCREEN_WIDTH / 3;
+		DEFAULT_MISSILE_SPEED = SCREEN_WIDTH / 3;
+		DEFAULT_CANNON_SPEED = SCREEN_WIDTH / 10;
 		batch = new SpriteBatch();
 		ScreenManager.setScreen(new GameScreen());
 	}

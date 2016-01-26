@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Texture;
 public class TextureManager {
     public static final Texture CANNON_BODY = new Texture(Gdx.files.internal("cannon_body.png"));
     public static final Texture CANNON_BARREL = new Texture(Gdx.files.internal("cannon_barrel.png"));
+    public static final Texture CANNON = new Texture(Gdx.files.internal("cannon.png"));
     public static final Texture EXPLOSION = new Texture(Gdx.files.internal("explosion.png"));
     public static final Texture LASER_PARTICLE = new Texture(Gdx.files.internal("laser_particle.png"));
     public static final Texture MISSILE_BLACKHOLE = new Texture(Gdx.files.internal("missile_blackhole.png"));
